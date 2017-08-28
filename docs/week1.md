@@ -44,5 +44,12 @@ sudo apt-get install build-essential
 #### Инструмент автоматизированной сборки `GNU make`.
 1. Пример типичного `Makefile`: [Makefile](../week1/step4/Makefile).
 
+#### Динамическая линковка в `Runtime`.
+1. Типичная схема подгрузки функции `void hello_message(const char *name)` из объектного файла `libHello.so` в `Runtime`:
+    * Меняем файл [`main.c`](../week1/step5/main.c) нужным образом.
+    * Меняем [`Makefile`](../week1/step5/Makefile). При сборке убираем в нем подключение объектного файла и добавляем флайг `-ldl` для подключения функции `dlopen`.
+    * Пересобираем и запускаем.
+
+
 
 [Назад к оглавлению](../README.md)
