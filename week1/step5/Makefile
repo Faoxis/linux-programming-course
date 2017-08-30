@@ -9,3 +9,5 @@ lib:	hello.h hello.c
 
 clean:
 	-rm hello libHello.so 2> /dev/null
+
+
